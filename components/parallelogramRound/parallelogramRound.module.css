@@ -1,0 +1,21 @@
+.parallelogramRound {
+    position: relative;
+    display: inline-block;
+    width: var(--clip-width); /* Dynamic width */
+    height: var(--clip-height); /* Dynamic height */
+    background-color: var(--primary-color); /* Adjustable color */
+    clip-path: url(#roundedParallelogram);
+    -webkit-clip-path: url(#roundedParallelogram); /* For Safari */
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .parallelogramRound .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  

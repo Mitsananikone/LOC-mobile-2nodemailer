@@ -1,0 +1,65 @@
+/* CenterContainer for vertical alignment */
+.centerContainerPage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh; /* Full viewport height */
+    background-color: var(--background-color);
+  }
+  
+  
+  /* Title styling */
+  .title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  /* Content row: Image and text side by side */
+  .contentRow {
+    display: flex;
+    flex-direction: row; /* Side by side */
+    justify-content: center; /* Center the row horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between image and text */
+    margin-top: 20px;
+  }
+  
+  /* Styling for the round image */
+  .profileImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-color);
+  }
+  
+  /* Text description */
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--primary-color);
+    flex: 1; /* Allow the text to grow and take up available space */
+  }
+  
+  .borderedImage {
+    border: 5px solid #897349; /* Brown color */
+    border-radius: 8px; /* Optional: Rounded corners for square images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+  }
+  
+  .profileImage {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Make circular */
+    object-fit: cover; /* Ensure the image fits well */
+    border-radius: 50%; /* Circular border */
+  }
+  
+  .profileImageSquare {
+    width: 100%; /* Adjust size for responsive design */
+    max-width: 400px; /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Slightly rounded corners */
+  }
+  

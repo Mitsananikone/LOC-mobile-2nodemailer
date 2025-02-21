@@ -1,0 +1,29 @@
+{
+  "name": "livingoak0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroicons/react": "^2.2.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.13.0",
+    "next": "^15.1.3",
+    "nodemailer": "^6.10.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.3"
+  }
+}

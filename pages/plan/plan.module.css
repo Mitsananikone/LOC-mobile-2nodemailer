@@ -1,0 +1,68 @@
+.mainContent {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 20px; /* Space between the image and text */
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1200px; /* Optional, adjust as needed */
+  position: relative; /* Ensure position can be adjusted */
+  top: 150px; /* Shift the block 100px lower */
+  margin-bottom: 150px;
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  padding: 1rem; /* Optional: Adds some padding */
+  text-align: center; /* Ensures text within h1 is centered */
+}
+
+.imageContainer {
+  flex: 1; /* Take up 1 part of the available space */
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensures the image matches the height of .mainContent */
+}
+
+.leftImage {
+  width: 100%;
+  max-width: 300px; /* Adjust max width as needed */
+  height: 400px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border: 3px solid var(--primary-color); /* Optional border */
+  border-radius: 8px; /* Optional rounded corners */
+
+}
+
+.textContainer {
+  flex: 2; /* Take up 2 parts of the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.contentRow {
+  display: flex;
+  align-items: center; /* Vertically align parallelogram and text */
+  margin-bottom: 0.5rem;
+  gap: 2rem; /* Space between the parallelogram and text */
+
+}
+
+.textContent {
+  flex: 1;
+}
+
+.parallelogramNumber {
+  font-size: 2rem;
+  color: var(--foreground-color);
+  transform: skew(20deg); /* Skew the number inside */
+}

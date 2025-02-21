@@ -1,0 +1,158 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Logo Styles */
+.logo img {
+  height: 48px;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Add shadow to logo */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: var(--foreground-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to hamburger lines */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hamburger Animation When Open */
+.hamburger[aria-expanded="true"] .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navigation Links Styles */
+.navLinks {
+  display: flex; /* Default for larger screens */
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.2rem;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.navLinks li {
+  cursor: pointer;
+  font-family: "Bebas Neue Pro Bold", sans-serif;
+  color: var(--primary-color);
+  transition: color 0.2s, transform 0.2s;
+  font-size: xx-large;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow */
+  position: relative;
+}
+
+.navLinks li::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  ); /* Add shine effect */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navLinks li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navLinks li:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px); /* Add hover lift effect */
+}
+
+/* Mobile Navigation Links Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .navLinks {
+    display: none; /* Hide links by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--secondary-color-light);
+    padding: 2rem 1rem; /* Increase padding for better spacing */
+    border-top: 1px solid var(--secondary-color);
+    gap: 1.5rem; /* Add spacing for mobile */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow below the menu */
+    backdrop-filter: blur(10px); /* Add blur effect */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease-in-out;
+    pointer-events: none; /* Disable clicks when hidden */
+  }
+
+  .navLinks.open {
+    display: flex; /* Show links when the hamburger is clicked */
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* Enable clicks when visible */
+  }
+
+  .navLinks li {
+    font-size: 1.2rem; /* Larger text for mobile */
+    text-align: center; /* Center-align text */
+    padding: 0.5rem 0; /* Add padding for better spacing */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add subtle divider */
+  }
+
+  .navLinks li:last-child {
+    border-bottom: none; /* Remove divider for the last item */
+  }
+
+  .navLinks li:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px); /* Add hover lift effect */
+  }
+}

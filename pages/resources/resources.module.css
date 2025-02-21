@@ -1,0 +1,28 @@
+.contentRow {
+  display: flex;
+  align-items: center; /* Vertically aligns the content */
+  justify-content: space-between; /* Ensures even spacing between image and text */
+  margin: 20px 0; /* Space between rows */
+  padding: 0 20px; /* Adds consistent spacing on left and right */
+}
+
+.imageContainer {
+  flex: 0 0 160px; /* Sets a fixed width for the image container */
+  display: flex;
+  justify-content: flex-start; /* Aligns image to the start of the row */
+}
+
+.resourceImage {
+  width: 100%; /* Ensures image fills the container */
+  height: auto;
+  max-width: 400px; /* Optional: Sets a max width for the image */
+  border-radius: 8px; /* Adds rounded corners */
+  border: 3px solid var(--primary-color); /* Optional border */
+}
+
+.textContainerRight {
+  flex: 1; /* Makes text take up the remaining space */
+  margin-left: 50px; /* Adds spacing between the image and text */
+  text-align: left; /* Ensures text aligns to the left */
+
+}

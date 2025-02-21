@@ -1,0 +1,92 @@
+/* === Root Variables for Theme Colors === */
+:root {
+  --primary-color: #171F37;      /* Primary brand color */
+  --secondary-color: #897349;   /* Secondary accent color */
+  --secondary-color-light: #A89A7B; 
+  --background-color: #ffffff;    /* Tertiary highlight color */
+  --foreground-color: #ededed;    /* Tertiary highlight color */
+
+  /* --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1500px; */
+
+}
+
+@font-face {
+  font-family: 'Coco Pro Bold';
+  src: local('Coco Pro Bold'),
+       url('/fonts/cocomat-pro-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue Pro Bold';
+  src: local('Bebas Neue Pro Bold'),
+       url('/fonts/bebasneuepro-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+html {
+  font-family: 'Coco Pro Bold', 'Bebas Neue Pro Bold',Arial, sans-serif;
+  background-color: var(--background-color);
+  /* color: var(--foreground-color); */
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  /* overflow: auto; Allow scrolling */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Coco Pro Bold', 'Bebas Neue Pro Bold', Arial, sans-serif;
+  margin: 0;
+  /* background-image: url('/images/oakTreeBackground.png');  */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-attachment: fixed; /* Keep the image fixed while scrolling */
+  height: 100%;
+  overflow: auto; /* Allow scrolling */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-mobile)) {
+  .contentRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileImage {
+    margin-bottom: 15px;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+
